@@ -1,5 +1,18 @@
-<h2>{{user.prennom}} {{user.prenom}}</h2>
+<h2>{{user.prenom}} {{user.nom}}</h2>
 
-<div>
-    
-</div>
+<h3>Compétences techniques</h3>
+<ul>
+    <li *ngFor="let skills of user.hardSkills">{{skills.intitule}}</li>
+</ul>
+
+<h3>Savoir-être</h3>
+<ul>
+    <li *ngFor="let skills of user.softSkills">{{skills.intitule}}</li>
+</ul>
+
+<h3>Diplomes et certifications</h3>
+<ul>
+    <li *ngFor="let diplomas of user.diplomes">{{diplomas.intitule}}</li>
+</ul>
+
+
