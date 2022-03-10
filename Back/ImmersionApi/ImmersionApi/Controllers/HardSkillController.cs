@@ -34,7 +34,7 @@ namespace ImmersionApi.Controllers
         }
 
         [HttpGet("/hardSkill/{id}")]
-        public IActionResult GetAContact(int id)
+        public IActionResult GetAHardskill(int id)
         {
             var hardSkill = _db.GetById(id);
 
@@ -51,7 +51,7 @@ namespace ImmersionApi.Controllers
         }
 
         [HttpPost("/hardSkill")]
-        public IActionResult AddAContact([FromForm] HardSkill newHardSkill)
+        public IActionResult AddAHardSkill([FromForm] HardSkill newHardSkill)
         {
             var hardSkill = _db.Add(new HardSkill() { Name = newHardSkill.Name });
 

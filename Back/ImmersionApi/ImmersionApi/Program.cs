@@ -1,9 +1,14 @@
 using ImmersionApi.Data;
+using WebAPI.Controllers.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddSingleton<HardSkillFakeDB>();
+builder.Services.AddSingleton<DiplomaFakeDB>();
+builder.Services.AddSingleton<UploadService>();
+builder.Services.AddSingleton<UserFakeDB>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
