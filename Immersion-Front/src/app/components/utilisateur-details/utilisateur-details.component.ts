@@ -20,10 +20,10 @@ export class UtilisateurDetailsComponent implements OnInit {
     
   }
 
-  getDetails() : void{
+  getDetails() : void {
     this.apiservice.getUser(this.id).subscribe( user => {
       this.user=user;
-      console.log(user.firstName);
+      console.log(user);
     } );
   } 
 

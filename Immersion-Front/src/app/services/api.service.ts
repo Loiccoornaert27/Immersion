@@ -30,7 +30,10 @@ export class APIService {
   }
 
   getUser(id:number) : Observable<User> {
-   return this.http.get<User>(`${this.userURL}/${id}`, this.httpOptions);
+    console.log(`${this.userURL}/${id}`);
+   var oui = this.http.get<User>(`${this.userURL}/${id}`, this.httpOptions);
+   console.log(oui); 
+   return oui;
   }
 
 }
