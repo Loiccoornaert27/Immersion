@@ -2,17 +2,15 @@
 {
     public class SoftSkill
     {
-        private int _id;
+        public int Id { get; set; }
         private static int _count;
-        private List<SoftSkill>? _listSoftSkill;
+        public string Name { get; set; }
 
-        public int Id { get => _id; set => _id = value; }
-        public static int Count { get => _count; set => _count = value; }
-        public List<SoftSkill>? ListSoftSkill { get => _listSoftSkill; set => _listSoftSkill = value; }
+        
 
         public SoftSkill()
         {
-            _id = ++_count;
+            Id = ++_count;
         }
     }
 }
