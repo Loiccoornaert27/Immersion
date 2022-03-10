@@ -86,18 +86,22 @@ namespace ImmersionApi.Controllers
         [HttpPatch("/job/{id}")]
         public IActionResult Editjob(int id, [FromForm] Job newJob)
         {
-            // TODO !!!!!!!!!!!!!!!!!!!!!!!
-            // Creer un nouveau Job et y affecter les champs null par rapport au données inseré par l'utilisateur 
-            // Ensuite, envoyer ce nouveau Job a la BDD
-
             var found = _db.GetById(id);
+
+            var editJob = new Job()
+            {
+                Name = newJob.Name ?? found.Name,
+                Description = newJob.Description ?? found.Description,
+                BeginDate = newJob.BeginDate ?? found.BeginDate,
+                Category = newJob.Category ?? found.Category,
+            };
 
             if (found == null) return NotFound(new
             {
                 Message = "Aucun Poste n'existe avec cet id"
             });
 
-            if (_db.Edit(newJob, id) != null) return Ok(new
+            if (_db.Edit(editJob, id) != null) return Ok(new
             {
                 Message = "Poste modifié avec succes"
             });
