@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Utilisateur } from 'app/models/Utilisateur';
-import { APIServiceService } from 'app/services/apiservice.service';
+import { APIService } from 'app/services/api.service';
 
 @Component({
   selector: 'app-utilisateur-details',
@@ -12,7 +12,7 @@ export class UtilisateurDetailsComponent implements OnInit {
   user !: Utilisateur;
   private id : number =1;
 
-  constructor(private apiservice : APIServiceService) { }
+  constructor(private apiservice : APIService) { }
 
   ngOnInit(): void {
     // this.getDetails();

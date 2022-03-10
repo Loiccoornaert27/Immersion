@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Poste } from 'app/models/Poste';
-import { APIServiceService } from 'app/services/apiservice.service';
+import { APIService } from 'app/services/api.service';
 
 @Component({
   selector: 'app-poste-details',
@@ -11,7 +11,7 @@ export class PosteDetailsComponent implements OnInit {
 
   poste !: Poste;
   
-  constructor(private apiservice:APIServiceService) { }
+  constructor(private apiservice:APIService) { }
 
   ngOnInit(): void {
   }

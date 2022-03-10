@@ -11,7 +11,7 @@ import { Utilisateur } from 'app/models/Utilisateur';
 @Injectable({
   providedIn: 'root'
 })
-export class APIServiceService {
+export class APIService {
 
   private posteURL: string = '';
   private userURL: string= '';
