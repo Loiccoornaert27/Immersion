@@ -1,4 +1,4 @@
 export interface Diplome{
     id: number;
-    intitule : string;
+    name : string;
 }

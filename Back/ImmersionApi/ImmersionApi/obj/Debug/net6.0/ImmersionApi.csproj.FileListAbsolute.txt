@@ -25,3 +25,13 @@ C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.pdb
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.genruntimeconfig.cache
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ref\ImmersionApi.dll
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.csproj.AssemblyReference.cache
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.AssemblyInfoInputs.cache
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.AssemblyInfo.cs
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.csproj.CoreCompileInputs.cache
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.dll
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\refint\ImmersionApi.dll
+C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.pdb

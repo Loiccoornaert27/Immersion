@@ -16,7 +16,7 @@ export class UtilisateurDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     // this.getDetails();
-    this.user={id:1,nom:"Coornaert",prenom:"Loic",hardSkills:[{id:1,intitule:'Angular'},{id:5,intitule:'C#'}],softSkills:[{id:2,intitule:'cafe'}],diplomes:[{id:2,intitule:"Diplome d'ingénieur"}] };
+    this.user={id:1,nom:"Coornaert",prenom:"Loic",hardSkills:[{id:1,name:'Angular'},{id:5,name:'C#'}],softSkills:[{id:2,name:'cafe'}],diplomes:[{id:2,name:"Diplome d'ingénieur"}] };
   }
 
   getDetails() : void{
