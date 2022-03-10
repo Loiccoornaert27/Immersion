@@ -8,6 +8,15 @@ builder.Services.AddSingleton<HardSkillFakeDB>();
 builder.Services.AddSingleton<DiplomaFakeDB>();
 builder.Services.AddSingleton<UploadService>();
 builder.Services.AddSingleton<UserFakeDB>();
+builder.Services.AddSingleton<JobFakeDB>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("allConnections", builder =>
+    {
+        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+    });
+});
 
 
 builder.Services.AddControllers();
@@ -23,6 +32,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+app.UseCors();
+
 
 app.UseHttpsRedirection();
 
