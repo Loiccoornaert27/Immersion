@@ -4,26 +4,26 @@ namespace ImmersionApi.Data
 {
     public class SoftSkillFakeDb
     {
-        private List<SoftSkill> SoftSkillName;
+        private List<SoftSkill> Name;
 
         public SoftSkillFakeDb()
         {
-            SoftSkillName = new();
+            Name = new();
         }
 
         public List<SoftSkill> GetAllSoftSkill()
         {
-            return SoftSkillName;
+            return Name;
         }
 
         public SoftSkill GetSoftSkillById(int id)
         {
-            return SoftSkillName.FirstOrDefault(x => x.Id == id);
+            return Name.FirstOrDefault(x => x.Id == id);
         }
 
         public SoftSkill AddSoftSkill(SoftSkill newSoftSkill)
         {
-            SoftSkillName.Add(newSoftSkill);
+            Name.Add(newSoftSkill);
             return newSoftSkill;
         }
 
@@ -32,7 +32,7 @@ namespace ImmersionApi.Data
             SoftSkill found = GetSoftSkillById(id);
 
             if (found == null) return false;
-            return SoftSkillName.Remove(found);         
+            return Name.Remove(found);         
         }
 
         public SoftSkill EditSoftSkill(int id, SoftSkill newSoftSkill)
@@ -42,7 +42,7 @@ namespace ImmersionApi.Data
             if (found == null) return null;
             else
             {
-                found.SoftSkillName = newSoftSkill.SoftSkillName;
+                found.Name = newSoftSkill.Name;
                 return found;
             }
         }
