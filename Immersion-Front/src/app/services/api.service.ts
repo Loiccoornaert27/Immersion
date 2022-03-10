@@ -6,15 +6,22 @@ import { Diplome } from 'app/models/Diplome';
 import { HardSkill } from 'app/models/HardSkill';
 import { Poste } from 'app/models/Poste';
 import { SoftSkill } from 'app/models/SoftSkill';
-import { Utilisateur } from 'app/models/Utilisateur';
+import { User } from 'app/models/User';
+
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class APIService {
 
+   httpOptions = {
+    headers : new HttpHeaders('content-type:application/json')
+  }
+
   private posteURL: string = '';
-  private userURL: string= '';
+  private userURL: string= 'https://localhost:7170/user';
 
   constructor(private http:HttpClient) { }
 
@@ -22,8 +29,8 @@ export class APIService {
     return this.http.get<Poste[]>(this.posteURL);
   }
 
-  getUser(id:number) : Observable<Utilisateur> {
-    return this.http.get<Utilisateur>(`${this.userURL}/${id}`);
+  getUser(id:number) : Observable<User> {
+   return this.http.get<User>(`${this.userURL}/${id}`, this.httpOptions);
   }
 
 }

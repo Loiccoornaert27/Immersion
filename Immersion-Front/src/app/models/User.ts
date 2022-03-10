@@ -2,14 +2,14 @@ import { Diplome } from "./Diplome";
 import { HardSkill } from "./HardSkill";
 import { SoftSkill } from "./SoftSkill";
 
-export interface Utilisateur{
+export interface User{
     id : number;
     email:string;
-    lastName : string;
     firstName : string;
+    lastName : string;
     isAdmin : boolean;
-    hardSkills: HardSkill[];
-    softSkills: SoftSkill[];
-    diplomes : Diplome[];
+    hardSkills: HardSkill[] | null;
+    softSkills: SoftSkill[] | null;
+    diplomes : Diplome[] | null;
     
 }

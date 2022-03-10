@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Utilisateur } from 'app/models/Utilisateur';
+import { User } from 'app/models/User';
+
 import { APIService } from 'app/services/api.service';
 
 @Component({
@@ -9,18 +10,21 @@ import { APIService } from 'app/services/api.service';
 })
 export class UtilisateurDetailsComponent implements OnInit {
 
-  user !: Utilisateur;
+  user !: User;
   private id : number =1;
 
   constructor(private apiservice : APIService) { }
 
   ngOnInit(): void {
-    // this.getDetails();
-    this.user={id:1,nom:"Coornaert",prenom:"Loic",hardSkills:[{id:1,name:'Angular'},{id:5,name:'C#'}],softSkills:[{id:2,name:'cafe'}],diplomes:[{id:2,name:"Diplome d'ingénieur"}] };
+    this.getDetails();
+    
   }
 
   getDetails() : void{
-    this.apiservice.getUser(this.id).subscribe( user => this.user=user );
+    this.apiservice.getUser(this.id).subscribe( user => {
+      this.user=user;
+      console.log(user.firstName);
+    } );
   } 
 
 }
