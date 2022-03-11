@@ -14,6 +14,18 @@ export class PosteDetailsComponent implements OnInit {
   constructor(private apiservice:APIService) { }
 
   ngOnInit(): void {
+    this.getDetails(6);
+  }
+
+  getDetails(id:number):void{
+    this.apiservice.getAJob(id).subscribe(job=>{
+      this.poste=job.job;
+    });
+  }
+
+  delete(poste : Poste):void{
+    this.apiservice.deleteAJob(poste.id).subscribe();
+    window.location.reload();
   }
 
 }

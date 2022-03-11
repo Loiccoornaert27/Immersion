@@ -16,24 +16,32 @@ import { User } from 'app/models/User';
 })
 export class APIService {
 
-   httpOptions = {
-    headers : new HttpHeaders('content-type:application/json')
+  httpOptions = {
+    headers: new HttpHeaders('content-type:application/json')
   }
 
-  private posteURL: string = 'https://localhost:7170/jobs';
-  private userURL: string= 'https://localhost:7170/user';
+  private posteURL: string = 'https://localhost:7170/job';
+  private userURL: string = 'https://localhost:7170/user';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getAllPostes():Observable<any>{
-    return this.http.get<any>(this.posteURL, this.httpOptions);
+  getAllPostes(): Observable<any> {
+    return this.http.get<any>(`${this.posteURL}s`, this.httpOptions);
   }
 
-  getUser(id:number) : Observable<any> {
+  getUser(id: number): Observable<any> {
     return this.http.get<any>(`${this.userURL}/${id}`, this.httpOptions);
   }
 
-  getAJob(id:number) : Observable<any> {
+  getAJob(id: number): Observable<any> {
     return this.http.get<any>(`${this.posteURL}/${id}`);
-   }
+  }
+
+  deleteAJob(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.posteURL}/${id}`)
+  }
+
+  addAJob(newJob : Poste): Observable<Poste>{
+    return this.http.post<Poste>(this.posteURL, newJob);
+  }
 }
