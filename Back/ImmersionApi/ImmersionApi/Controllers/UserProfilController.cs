@@ -60,8 +60,8 @@ namespace ImmersionApi.Controllers
         public IActionResult AddAUserProfil([FromForm] UserProfil newUserProfil, [FromForm] List<int> hardSkillID, [FromForm] List<int> softSkillID, [FromForm] List<int> diplomaID)
         {
             var listSoft = _dbSoftSkill.GetSoftSkillById(softSkillID);
-            var listHard = _dbHardSkill.GetHardSkillById(softSkillID);
-            var listDiploma = _dbDiploma.GetDiplomaById(softSkillID);
+            var listHard = _dbHardSkill.GetHardSkillById(hardSkillID);
+            var listDiploma = _dbDiploma.GetDiplomaById(diplomaID);
 
             var userProfil = _db.Add(new UserProfil() { 
                 Job = newUserProfil.Job, 
