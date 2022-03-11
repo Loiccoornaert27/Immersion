@@ -61,5 +61,17 @@ namespace ImmersionApi.Data
 
             return _diplomas.Remove(diploma);
         }
+
+        public List<Diploma> GetDiplomaById(List<int> idList)
+        {
+            List<Diploma> list = new List<Diploma>();
+
+            foreach (var id in idList)
+            {
+                list.Add(_diplomas.FirstOrDefault(x => x.ID == id));
+            }
+
+            return list;
+        }
     }
 }

@@ -10,10 +10,16 @@ namespace ImmersionApi.Controllers
     public class UserProfilController : ControllerBase
     {
         private readonly UserProfilFakeDB _db;
+        private readonly SoftSkillFakeDb _dbSoftSkill;
+        private readonly HardSkillFakeDB _dbHardSkill;
+        private readonly DiplomaFakeDB _dbDiploma;
 
-        public UserProfilController(UserProfilFakeDB db)
+        public UserProfilController(UserProfilFakeDB db, SoftSkillFakeDb dbSoftSkill, HardSkillFakeDB dbHardSkill, DiplomaFakeDB dbDiploma)
         {
             _db = db;
+            _dbSoftSkill = dbSoftSkill;
+            _dbHardSkill = dbHardSkill;
+            _dbDiploma = dbDiploma;
         }
 
         [HttpGet("/userProfil")]
@@ -51,9 +57,18 @@ namespace ImmersionApi.Controllers
         }
 
         [HttpPost("/userProfil")]
-        public IActionResult AddAUserProfil([FromForm] UserProfil newUserProfil, List<int> hardSkillID, List<int> softSkillID, List<int> diplomaID)
+        public IActionResult AddAUserProfil([FromForm] UserProfil newUserProfil, [FromForm] List<int> hardSkillID, [FromForm] List<int> softSkillID, [FromForm] List<int> diplomaID)
         {
-            var userProfil = _db.Add(new UserProfil() { Diplomas = newUserProfil.Diplomas, HardSkills = newUserProfil.HardSkills, Job = newUserProfil.Job, SoftSkills = newUserProfil.SoftSkills });
+            var listSoft = _dbSoftSkill.GetSoftSkillById(softSkillID);
+            var listHard = _dbHardSkill.GetHardSkillById(softSkillID);
+            var listDiploma = _dbDiploma.GetDiplomaById(softSkillID);
+
+            var userProfil = _db.Add(new UserProfil() { 
+                Job = newUserProfil.Job, 
+                SoftSkills = listSoft,
+                HardSkills = listHard,
+                Diplomas = listDiploma
+            });
 
             if (userProfil != null) return Ok(new
             {
