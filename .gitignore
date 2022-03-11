@@ -452,3 +452,6 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+Back/ImmersionApi/ImmersionApi/bin/Debug/net6.0/ImmersionApi.dll
+Back/ImmersionApi/ImmersionApi/bin/Debug/net6.0/ImmersionApi.exe
+Back/ImmersionApi/ImmersionApi/bin/Debug/net6.0/ImmersionApi.pdb
