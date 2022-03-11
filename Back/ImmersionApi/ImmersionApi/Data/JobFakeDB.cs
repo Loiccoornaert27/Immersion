@@ -9,6 +9,17 @@ namespace ImmersionApi.Data
         public JobFakeDB()
         {
             _jobs = new List<Job>();
+            Seed();
+        }
+
+        private void Seed()
+        {
+            _jobs = new List<Job>()
+            {
+                new Job() { BeginDate = DateTime.Now, Category = Enums.Category.System, Description = "Description d'un poste dans le syteme", Name = "Admin réseau" },
+                new Job() { BeginDate = new DateTime(11, 10, 1996), Category = Enums.Category.Developper, Description = "Description d'un poste dans dev", Name = "Dev C#" },
+                new Job() { BeginDate = new DateTime(11, 10, 2020), Category = Enums.Category.Manager, Description = "Description d'un poste de manager", Name = "manager" },
+            };
         }
 
         public List<Job> GetAll()
