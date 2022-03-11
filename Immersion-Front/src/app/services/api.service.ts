@@ -26,7 +26,7 @@ export class APIService {
   constructor(private http:HttpClient) { }
 
   getAllPostes():Observable<any>{
-    return this.http.get<any>(this.posteURL);
+    return this.http.get<any>(this.posteURL, this.httpOptions);
   }
 
   getUser(id:number) : Observable<any> {

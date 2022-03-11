@@ -9,18 +9,17 @@ import { APIService } from 'app/services/api.service';
 })
 export class JobListComponent implements OnInit {
 
-  jobs !: Poste[];
+  jobs: Poste[] = [];
 
-  constructor(private APIservice : APIService ) { }
+  constructor(private APIservice: APIService) { }
 
   ngOnInit(): void {
     this.getAllJobs();
   }
 
-  getAllJobs() : void{
-    this.APIservice.getAllPostes().subscribe(poste=>{
-      console.log(poste);
-      console.log(poste.job);
+  getAllJobs(): void {
+    this.APIservice.getAllPostes().subscribe(poste => {
+      this.jobs = poste.jobs;
     });
   }
 
