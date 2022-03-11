@@ -19,7 +19,7 @@ namespace ImmersionApi.Controllers
             _uploadService = uploadService;
         }
 
-        [HttpGet("/users")]
+        [HttpGet("/user")]
         public IActionResult GetAllUsers()
         {
             var users = _db.GetAll();

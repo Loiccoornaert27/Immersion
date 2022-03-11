@@ -583,19 +583,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kamel\\.nuget\\packages\\": {}
+    "C:\\Users\\User1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kamel\\Documents\\Aston\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
+      "projectUniqueName": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
       "projectName": "ImmersionApi",
-      "projectPath": "C:\\Users\\Kamel\\Documents\\Aston\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
-      "packagesPath": "C:\\Users\\Kamel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kamel\\Documents\\Aston\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\obj\\",
+      "projectPath": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
+      "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kamel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -652,7 +652,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -16,7 +16,7 @@ namespace ImmersionApi.Controllers
             _db = db;
         }
 
-        [HttpGet("/jobs")]
+        [HttpGet("/job")]
         public IActionResult GetAlljobs()
         {
             var jobs = _db.GetAll();

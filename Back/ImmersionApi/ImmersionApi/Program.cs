@@ -2,6 +2,7 @@ using ImmersionApi.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Text.Json.Serialization;
 using WebAPI.Controllers.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,12 @@ builder.Services.AddSingleton<DiplomaFakeDB>();
 builder.Services.AddSingleton<UploadService>();
 builder.Services.AddSingleton<UserFakeDB>();
 builder.Services.AddSingleton<JobFakeDB>();
+
+builder.Services.AddControllers().AddJsonOptions(x =>
+{
+    x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
+
 
 builder.Services.AddCors(options =>
 {
