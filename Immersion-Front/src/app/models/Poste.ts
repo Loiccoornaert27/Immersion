@@ -4,10 +4,10 @@ import { SoftSkill } from "./SoftSkill";
 
 export interface Poste{
     id: number;
-    intitule: string;
+    name: string;
     description: string;
-    categorie: string;
-    diplomes: Diplome[];
-    softSkills: SoftSkill[];
-    hardSkills: HardSkill[];
+    category: string;
+    diplomes: Diplome[] | null;
+    softSkills: SoftSkill[] | null;
+    hardSkills: HardSkill[] | null;
 }

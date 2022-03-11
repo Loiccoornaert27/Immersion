@@ -30,8 +30,10 @@ export class APIService {
   }
 
   getUser(id:number) : Observable<any> {
-    console.log(`${this.userURL}/${id}`);
     return this.http.get<any>(`${this.userURL}/${id}`, this.httpOptions);
   }
 
+  getAJob(id:number) : Observable<any> {
+    return this.http.get<any>(`${this.posteURL}/${id}`);
+   }
 }
