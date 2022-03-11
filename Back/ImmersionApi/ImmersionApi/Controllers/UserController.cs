@@ -12,11 +12,13 @@ namespace ImmersionApi.Controllers
     {
         private readonly UserFakeDB _db;
         private readonly UploadService _uploadService;
+        private readonly UserProfilFakeDB _dbUserProfil;
 
-        public UserController(UserFakeDB db, UploadService uploadService)
+        public UserController(UserFakeDB db, UploadService uploadService,UserProfilFakeDB dbUserProfil )
         {
             _db = db;
             _uploadService = uploadService;
+            _dbUserProfil = dbUserProfil;
         }
 
         [HttpGet("/user")]
@@ -26,12 +28,12 @@ namespace ImmersionApi.Controllers
 
             if (users.Count == 0) return NotFound(new
             {
-                Message = "Il n'y a aucun user "
+                Message = "Il n'y a aucun utilisateur "
             });
 
             return Ok(new
             {
-                Message = "Voicie la liste des users",
+                Message = "Voicie la liste des utilisateurs",
                 users = users
             });
         }
@@ -43,7 +45,7 @@ namespace ImmersionApi.Controllers
 
             if (user == null) return NotFound(new
             {
-                Message = "Aucun user ne correspond a cet ID"
+                Message = "Aucun utilisateur ne correspond a cet ID"
             });
 
             else return Ok(new
@@ -67,11 +69,15 @@ namespace ImmersionApi.Controllers
 
             newuser.Avatar = path;
 
-            var user = _db.Add(new User() { Email = newuser.Email, FirstName = newuser.FirstName, LastName = newuser.LastName, Avatar = path, IsAdmin = newuser.IsAdmin, Password = newuser.Password  });
+            // Creation vierge du profil utilisateur
+            var userProfile = new UserProfil();
+            _dbUserProfil.Add(userProfile);
+
+            var user = _db.Add(new User() { Email = newuser.Email, FirstName = newuser.FirstName, LastName = newuser.LastName, Avatar = path, IsAdmin = newuser.IsAdmin, Password = newuser.Password, UserProfilID = userProfile.ID  });
 
             if (user != null) return Ok(new
             {
-                Message = "Le user a été ajouté ;)"
+                Message = "L'utilisateur a été ajouté ;)"
             });
 
             else return BadRequest(new
@@ -93,7 +99,7 @@ namespace ImmersionApi.Controllers
 
             else return NotFound(new
             {
-                Message = "Aucun usere ne possède cet id"
+                Message = "Aucun utilisateur ne possède cet id"
             });
 
         }
@@ -105,12 +111,12 @@ namespace ImmersionApi.Controllers
 
             if (found == null) return NotFound(new
             {
-                Message = "Aucun user n'existe avec cet id"
+                Message = "Aucun utilisateur n'existe avec cet id"
             });
 
             if (_db.Edit(img, newuser, id) != null) return Ok(new
             {
-                Message = "usere Modifier avec succes"
+                Message = "Utilisateur Modifier avec succes"
             });
 
             return BadRequest(new

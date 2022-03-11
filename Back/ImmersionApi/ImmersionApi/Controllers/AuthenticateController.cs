@@ -37,7 +37,7 @@ namespace ImmersionApi.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, credential.Email),
                     new Claim(ClaimTypes.Email, credential.Email),
-                    new Claim(ClaimTypes.Role, ((bool)user.IsAdmin ? "Admin" : "user"))
+                    new Claim(ClaimTypes.Role, user.IsAdmin ? "Admin" : "User")
                 };
 
                 var expiresAt = DateTime.UtcNow.AddMinutes(30);
@@ -49,8 +49,7 @@ namespace ImmersionApi.Controllers
                 });
             }
 
-            ModelState.AddModelError("Unauthorized", "You are not authorized to access the endpoint");
-            return Unauthorized(ModelState);
+            return NotFound(new { Message = "Impossible de se connecter ! Utilisateur introuvable..." });
         }
 
         private string CreateToken(IEnumerable<Claim> claims, DateTime expiresAt)
