@@ -20,20 +20,18 @@ export class APIService {
     headers : new HttpHeaders('content-type:application/json')
   }
 
-  private posteURL: string = '';
+  private posteURL: string = 'https://localhost:7170/jobs';
   private userURL: string= 'https://localhost:7170/user';
 
   constructor(private http:HttpClient) { }
 
-  getAllPostes():Observable<Poste[]>{
-    return this.http.get<Poste[]>(this.posteURL);
+  getAllPostes():Observable<any>{
+    return this.http.get<any>(this.posteURL);
   }
 
-  getUser(id:number) : Observable<User> {
+  getUser(id:number) : Observable<any> {
     console.log(`${this.userURL}/${id}`);
-   var oui = this.http.get<User>(`${this.userURL}/${id}`, this.httpOptions);
-   console.log(oui); 
-   return oui;
+    return this.http.get<any>(`${this.userURL}/${id}`, this.httpOptions);
   }
 
 }
