@@ -9,6 +9,19 @@ namespace ImmersionApi.Data
         public SoftSkillFakeDb()
         {
             _softSkills = new();
+            Seed();
+        }
+
+        public void Seed()
+        {
+            _softSkills = new List<SoftSkill>()
+            {
+                new SoftSkill() { Name = "Travail d'equipe"},
+                new SoftSkill() { Name = "Sociable"},
+                new SoftSkill() { Name = "Extravertie"},
+                new SoftSkill() { Name = "Curiosité"},
+                new SoftSkill() { Name = "Je sais plus quoi mettre"},
+            };
         }
 
         public List<SoftSkill> GetAllSoftSkill()
