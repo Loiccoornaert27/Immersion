@@ -51,7 +51,7 @@ namespace ImmersionApi.Controllers
         }
 
         [HttpPost("/userProfil")]
-        public IActionResult AddAUserProfil([FromForm] UserProfil newUserProfil)
+        public IActionResult AddAUserProfil([FromForm] UserProfil newUserProfil, List<int> hardSkillID, List<int> softSkillID, List<int> diplomaID)
         {
             var userProfil = _db.Add(new UserProfil() { Diplomas = newUserProfil.Diplomas, HardSkills = newUserProfil.HardSkills, Job = newUserProfil.Job, SoftSkills = newUserProfil.SoftSkills });
 
