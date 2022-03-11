@@ -4,8 +4,8 @@
     {
         public int ID { get; set; }
         public Job Job { get; set; }
-        public List<int> SoftSkills { get; set; }
-        public List<int> HardSkills { get; set; }
-        public List<int> Diplomas { get; set; }
+        public List<SoftSkill> SoftSkills { get; set; }
+        public List<HardSkill> HardSkills { get; set; }
+        public List<Diploma> Diplomas { get; set; }
     }
 }
