@@ -1,7 +1,12 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\User1\\Documents\\GitHub\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\User1\\Documents\\Dev\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {}
+>>>>>>> Dev
   },
   "projects": {
     "C:\\Users\\User1\\Documents\\GitHub\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {
@@ -11,7 +16,24 @@
         "projectName": "ImmersionApi",
         "projectPath": "C:\\Users\\User1\\Documents\\GitHub\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
         "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
+<<<<<<< HEAD
         "outputPath": "C:\\Users\\User1\\Documents\\GitHub\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\obj\\",
+=======
+        "outputPath": "C:\\Users\\User1\\Documents\\Dev\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\obj\\",
+=======
+    "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
+        "projectName": "ImmersionApi",
+        "projectPath": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
+        "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\obj\\",
+>>>>>>> Kamel
+>>>>>>> Dev
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
