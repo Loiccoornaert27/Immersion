@@ -121,15 +121,19 @@ namespace ImmersionApi.Controllers
                 }
                 if (!owned) missingDiplomas.Add(profil.Diplomas[i]);
             }
-
+            Result result = new Result()
+            {
+                SoftSkillsNeeded = missingSoftNeeded,
+                SoftSkills = missingSoft,
+                HardSkillsNeeded = missingHardNeeded,
+                HardSkills = missingHard,
+                DiplomasNeeded = missingDiplomasNeeded,
+                Diplomas = missingDiplomas
+            };
             return Ok(new
             {
-                softSkillsNeeded = missingSoftNeeded,
-                softSkills = missingSoft,
-                hardSkillsNeeded = missingHardNeeded,
-                hardSkills = missingHard,
-                diplomasNeeded = missingDiplomasNeeded,
-                diplomas = missingDiplomas
+                Message="Resulat requete cree",
+                result = result  
             });
         }
     }
