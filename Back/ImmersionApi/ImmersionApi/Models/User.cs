@@ -9,6 +9,7 @@
         public string? Password { set ; get; }
         public bool? IsAdmin { get; set; }
         public string? Avatar { get; set; }
+        public int? UserProfilID { get; set; }
 
         private static int Count { get; set; }
 
