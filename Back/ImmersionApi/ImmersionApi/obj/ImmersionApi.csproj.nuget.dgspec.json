@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\User1\\Documents\\Dev\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\User1\\Documents\\Dev\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
         "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User1\\Documents\\Dev\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\obj\\",
+=======
+    "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
+        "projectName": "ImmersionApi",
+        "projectPath": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\ImmersionApi.csproj",
+        "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User1\\Documents\\Immersion\\Back\\ImmersionApi\\ImmersionApi\\obj\\",
+>>>>>>> Kamel
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config",

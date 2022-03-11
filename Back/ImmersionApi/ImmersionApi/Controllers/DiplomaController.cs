@@ -16,7 +16,7 @@ namespace ImmersionApi.Controllers
             _db = db;
         }
 
-        [HttpGet("/diplomas")]
+        [HttpGet("/diploma")]
         public IActionResult GetAllDiplomas()
         {
             var diplomas = _db.GetAll();
