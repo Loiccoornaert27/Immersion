@@ -25,7 +25,6 @@ C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.pdb
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.genruntimeconfig.cache
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ref\ImmersionApi.dll
-
 C:\Users\User1\Documents\Dev\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.csproj.AssemblyReference.cache
 C:\Users\User1\Documents\Dev\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User1\Documents\Dev\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.AssemblyInfoInputs.cache
@@ -53,7 +52,6 @@ C:\Users\User1\Documents\Dev\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\
 C:\Users\User1\Documents\Dev\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.csproj.CopyComplete
 C:\Users\User1\Documents\Dev\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.genruntimeconfig.cache
 C:\Users\User1\Documents\Dev\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ref\ImmersionApi.dll
-
 C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\appsettings.json
 C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\ImmersionApi.exe
@@ -81,7 +79,6 @@ C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Deb
 C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.pdb
 C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ImmersionApi.genruntimeconfig.cache
 C:\Users\User1\Documents\GitHub\Immersion\Back\ImmersionApi\ImmersionApi\obj\Debug\net6.0\ref\ImmersionApi.dll
-
 C:\Users\Kamel\Documents\Aston\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Kamel\Documents\Aston\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\appsettings.json
 C:\Users\Kamel\Documents\Aston\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\ImmersionApi.exe
@@ -123,4 +120,3 @@ C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\User1\Documents\Immersion\Back\ImmersionApi\ImmersionApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-
