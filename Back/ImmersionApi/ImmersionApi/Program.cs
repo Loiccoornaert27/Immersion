@@ -14,6 +14,8 @@ builder.Services.AddSingleton<UploadService>();
 builder.Services.AddSingleton<UserFakeDB>();
 builder.Services.AddSingleton<JobFakeDB>();
 builder.Services.AddSingleton<SoftSkillFakeDb>();
+builder.Services.AddSingleton<UserProfilFakeDB>();
+builder.Services.AddSingleton<RegularProfilFakeDB>();
 
 builder.Services.AddControllers().AddJsonOptions(x =>
 {
