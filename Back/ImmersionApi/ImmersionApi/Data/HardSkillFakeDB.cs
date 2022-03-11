@@ -62,6 +62,17 @@ namespace ImmersionApi.Data
             return _hardSkills.Remove(hardSkill);
         }
 
+        public List<HardSkill> GetHardSkillById(List<int> idList)
+        {
+            List<HardSkill> list = new List<HardSkill>();
+
+            foreach (var id in idList)
+            {
+                list.Add(_hardSkills.FirstOrDefault(x => x.ID == id));
+            }
+
+            return list;
+        }
 
 
     }
