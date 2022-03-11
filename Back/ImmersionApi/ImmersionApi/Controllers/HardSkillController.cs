@@ -16,7 +16,7 @@ namespace ImmersionApi.Controllers
             _db = db;
         }
 
-        [HttpGet("/hardSkills")]
+        [HttpGet("/hardSkill")]
         public IActionResult GetAllHardSkills()
         {
             var hardSkills = _db.GetAll();
