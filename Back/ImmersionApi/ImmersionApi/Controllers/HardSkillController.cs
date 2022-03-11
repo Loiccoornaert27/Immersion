@@ -1,5 +1,6 @@
 ﻿using ImmersionApi.Data;
 using ImmersionApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,7 +29,7 @@ namespace ImmersionApi.Controllers
 
             return Ok(new
             {
-                Message = "Voicie la liste des competence",
+                Message = "Voicie la liste des competences",
                 hardSkills = hardSkills
             });
         }
@@ -51,6 +52,7 @@ namespace ImmersionApi.Controllers
         }
 
         [HttpPost("/hardSkill")]
+        [Authorize("User")]
         public IActionResult AddAHardSkill([FromForm] HardSkill newHardSkill)
         {
             var hardSkill = _db.Add(new HardSkill() { Name = newHardSkill.Name });

@@ -7,7 +7,7 @@
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Password { set ; get; }
-        public bool? IsAdmin { get; set; }
+        public bool IsAdmin { get; set; }
         public string? Avatar { get; set; }
         public int? UserProfilID { get; set; }
 

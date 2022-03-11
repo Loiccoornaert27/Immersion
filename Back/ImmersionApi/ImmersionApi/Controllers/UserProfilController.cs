@@ -72,7 +72,7 @@ namespace ImmersionApi.Controllers
 
             if (userProfil != null) return Ok(new
             {
-                Message = "Le profile utilisateur à bien été créer ;)"
+                Message = "Le profil utilisateur à bien été créer ;)"
             });
 
             else return BadRequest(new
@@ -99,15 +99,19 @@ namespace ImmersionApi.Controllers
         }
 
         [HttpPatch("/userProfil/{id}")]
-        public IActionResult EditUserProfil(int id, [FromForm] UserProfil userProfil)
+        public IActionResult EditUserProfil(int id, [FromForm] UserProfil userProfil, [FromForm] List<int> hardSkillID, [FromForm] List<int> softSkillID, [FromForm] List<int> diplomaID)
         {
             var found = _db.GetById(id);
 
+            var listSoft = _dbSoftSkill.GetSoftSkillById(softSkillID);
+            var listHard = _dbHardSkill.GetHardSkillById(hardSkillID);
+            var listDiploma = _dbDiploma.GetDiplomaById(diplomaID);
+
             var editUserProfil = new UserProfil()
             {
-                Diplomas = userProfil.Diplomas ?? found.Diplomas,
-                HardSkills = userProfil.HardSkills ?? found.HardSkills,
-                SoftSkills = userProfil.SoftSkills ?? found.SoftSkills,
+                Diplomas = listDiploma,
+                HardSkills = listHard,
+                SoftSkills = listSoft,
                 Job = userProfil.Job ?? found.Job,
             };
 
@@ -125,6 +129,27 @@ namespace ImmersionApi.Controllers
             {
                 Message = "Oups .. Un Problème est survenue"
             });
+        }
+
+        public List<T> GetFinalList<T>(List<T> oldList, List<T> newList) where T: class
+        {
+            var same = false;
+            List<T> list = new List<T>();
+
+            foreach (var item1 in newList)
+            {
+                foreach (var item2 in oldList)
+                {
+                    if (item1 == item2)
+                        same = true;
+                }
+                if (!same)
+                    list.Add(item1);
+
+                same = false;
+            }
+
+            return list;
         }
     }
 }
